@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_freq_title"
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="频率设置"
+        android:textSize="30sp"/>
+
+    <ListView
+        android:id="@+id/channels"
+        android:layout_width="600dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_freq_title"
+        android:layout_marginTop="20dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_date_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_freq_title"
+        android:layout_marginLeft="200dp"
+        android:layout_toRightOf="@id/tv_freq_title"
+        android:text="有效期: "
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_freq_title"
+        android:layout_toRightOf="@id/tv_date_title"
+        android:gravity="right"
+        android:text="只读/加密"
+        android:textSize="30sp"/>
+
+
+    <TextView
+        android:id="@+id/tv_id_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_date_title"
+        android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_toEndOf="@id/tv_freq_title"
+        android:layout_toRightOf="@id/tv_freq_title"
+        android:text="ID: "
+        android:textSize="30sp"/>
+
+    <EditText
+        android:id="@+id/usrID"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_id_title"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toEndOf="@id/tv_id_title"
+        android:layout_toLeftOf="@+id/uidSet"
+        android:layout_toRightOf="@id/tv_id_title"
+        android:layout_toStartOf="@+id/uidSet"
+        android:gravity="end"
+        android:hint="有效ID范围:1~65535"
+        android:inputType="number"
+        android:maxLength="5"
+        android:singleLine="true"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/uidSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_id_title"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/button_selector"
+        android:text="设置"/>
+
+    <TextView
+        android:id="@+id/tv_offset_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_id_title"
+        android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_toEndOf="@id/tv_freq_title"
+        android:layout_toRightOf="@id/tv_freq_title"
+        android:text="频偏: "
+        android:textSize="30sp"/>
+
+    <EditText
+        android:id="@+id/offset"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_offset_title"
+        android:layout_toEndOf="@id/tv_offset_title"
+        android:layout_toRightOf="@id/tv_offset_title"
+        android:gravity="end"
+        android:hint="0~255"
+        android:inputType="number"
+        android:maxLength="3"
+        android:singleLine="true"
+        android:text="180"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/tv_hz_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_offset_title"
+        android:layout_toEndOf="@id/offset"
+        android:layout_toRightOf="@id/offset"
+        android:text="Hz"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/tv_tiny_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_offset_title"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_toEndOf="@id/tv_hz_title"
+        android:layout_toRightOf="@id/tv_hz_title"
+        android:text="微调:  "
+        android:textSize="30sp"/>
+
+    <ImageButton
+        android:id="@+id/offset_plus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@id/tv_offset_title"
+        android:layout_toEndOf="@id/tv_tiny_title"
+        android:layout_toRightOf="@id/tv_tiny_title"
+        android:src="@drawable/plus"/>
+
+    <ImageButton
+        android:id="@+id/offset_minus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@id/tv_offset_title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/offset_plus"
+        android:layout_toRightOf="@id/offset_plus"
+        android:src="@drawable/minus"/>
+
+    <Button
+        android:id="@+id/offset_w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_offset_title"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/button_selector"
+        android:text="设置"/>
+
+    <TextView
+        android:id="@+id/tv_unlink_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_offset_title"
+        android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_toEndOf="@id/tv_freq_title"
+        android:layout_toRightOf="@id/tv_freq_title"
+        android:text="自动拆连时间: "
+        android:textSize="30sp"/>
+
+    <EditText
+        android:id="@+id/unlinkTime"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_unlink_title"
+        android:layout_toRightOf="@id/tv_unlink_title"
+        android:editable="false"
+        android:gravity="end"
+        android:inputType="number"
+        android:singleLine="true"
+        android:text="60"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/tv_minis_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_unlink_title"
+        android:layout_toRightOf="@id/unlinkTime"
+        android:text="分钟"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/unLinkSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_unlink_title"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/button_selector"
+        android:text="设置"/>
+
+    <ImageView
+        android:id="@+id/state_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/unLinkSet"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/lock"/>
+</RelativeLayout>

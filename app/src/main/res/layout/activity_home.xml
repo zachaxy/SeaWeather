@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/map_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="setTabSelection"
+        android:src="@drawable/map_select"/>
+
+    <TextView
+        android:id="@+id/map_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/map_image"
+        android:text="查看天气"/>
+
+    <ImageView
+        android:id="@+id/setting_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/map_text"
+        android:layout_marginTop="150dp"
+        android:onClick="setTabSelection"
+        android:src="@drawable/map_select"/>
+
+    <TextView
+        android:id="@+id/setting_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setting_image"
+        android:text="参数设置"/>
+
+    <TextView
+        android:id="@+id/db_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:text="历史消息"/>
+
+    <ImageView
+        android:id="@+id/db_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/db_text"
+        android:onClick="setTabSelection"
+        android:src="@drawable/map_select"/>
+
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/setting_text">
+    </FrameLayout>
+</RelativeLayout>

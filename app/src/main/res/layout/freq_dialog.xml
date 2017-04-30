@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/material_card">
+
+        <TextView
+            android:id="@+id/tv_freq_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="频率设置(范围在3.0000~31.9999)"
+            android:textColor="@color/black_de"
+            android:textSize="18sp"/>
+
+
+        <ImageView
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@id/tv_freq_title"
+            android:src="@drawable/divider_line"/>
+
+
+        <TextView
+            android:id="@+id/tv_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:text="."
+            android:textSize="30sp"/>
+
+        <EditText
+            android:id="@+id/tv_freq_left"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_dot"
+            android:layout_toLeftOf="@id/tv_dot"
+            android:gravity="right"
+            android:text="12"
+            android:textSize="25dp"/>
+
+        <EditText
+            android:id="@+id/tv_freq_right"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_dot"
+            android:layout_toRightOf="@id/tv_dot"
+            android:gravity="left"
+            android:text="9999"
+            android:textSize="25dp"/>
+
+        <Button
+            android:id="@+id/btn_freq_nok"
+            style="@style/ActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_dot"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@id/tv_dot"
+            android:text="取消"
+            android:textColor="@color/colorAccent"/>
+
+        <Button
+            android:id="@+id/btn_freq_ok"
+            style="@style/ActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/btn_freq_nok"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/tv_dot"
+            android:text="确认"
+            android:textColor="#ff239ff2"/>
+    </RelativeLayout>
+</RelativeLayout>

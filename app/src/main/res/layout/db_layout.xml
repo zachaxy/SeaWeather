@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/tv_db_title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="400dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:text="当前的展示的信息是:"
+        android:textSize="25sp"/>
+
+    <Spinner
+        android:id="@+id/sp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_db_title1"
+        android:layout_marginRight="200dp"
+        android:layout_toRightOf="@id/tv_db_title1"/>
+
+    <ImageView
+        android:id="@+id/pre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="400dp"
+        android:src="@drawable/pre"/>
+
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="400dp"
+        android:src="@drawable/next"/>
+
+    <ListView
+        android:id="@+id/lv_db"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/next"
+        android:layout_below="@id/tv_db_title1">
+    </ListView>
+
+</RelativeLayout>

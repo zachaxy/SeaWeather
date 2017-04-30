@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000000">
+
+    <!--可缩放的组件-->
+    <com.fenghuo.seaweather.widget.ZoomImageView
+        android:id="@+id/zoomImg"
+        android:layout_width="727dp"
+        android:layout_height="727dp"
+        android:scaleType="matrix"/>
+
+    <ImageView
+        android:id="@+id/weather24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_toRightOf="@id/zoomImg"
+        android:src="@drawable/weather_24hour_tip"/>
+
+    <ImageView
+        android:id="@+id/weather48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_toRightOf="@id/zoomImg"
+        android:src="@drawable/weather_48hour_tip"/>
+
+    <ImageView
+        android:id="@+id/typhoon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_toRightOf="@id/zoomImg"
+        android:src="@drawable/typhoon_tip"/>
+
+    <ImageView
+        android:id="@+id/delete_typhoon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_toRightOf="@id/zoomImg"
+        android:src="@drawable/delete_typhoon"
+        android:visibility="invisible"/>
+
+    <!--************************************************************-->
+
+    <ImageButton
+        android:id="@+id/sound_switch"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/weather24"/>
+
+    <ImageButton
+        android:id="@+id/sounds"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@id/sound_switch"
+        android:layout_toRightOf="@id/sound_switch"
+        android:src="@drawable/sounds"/>
+
+    <TextView
+        android:id="@+id/f1_tv_date_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/sound_switch"
+        android:layout_toRightOf="@id/sounds"
+        android:gravity="center"
+        android:text="有效期:"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/sound_switch"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/f1_tv_date_title"
+        android:gravity="center"
+        android:textSize="20sp"/>
+    <!--**********************************************************************-->
+    <TextView
+        android:id="@+id/f1_tv_freq_rate_title"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@id/sound_switch"
+        android:layout_below="@id/sound_switch"
+        android:gravity="center"
+        android:text="信道速率:"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/xindaosulv"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/f1_tv_freq_rate_title"
+        android:layout_below="@id/sound_switch"
+        android:layout_toRightOf="@id/f1_tv_freq_rate_title"
+        android:gravity="center"
+        android:textSize="18sp"/>
+
+    <ImageView
+        android:id="@+id/f1_img_divider1"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/f1_tv_freq_rate_title"
+        android:layout_below="@id/sound_switch"
+        android:layout_toRightOf="@id/xindaosulv"
+        android:background="#a7a4a4"/>
+
+    <TextView
+        android:id="@+id/f1_tv_freq_no_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/f1_tv_freq_rate_title"
+        android:layout_below="@id/sound_switch"
+        android:layout_toRightOf="@id/f1_img_divider1"
+        android:gravity="center"
+        android:text="信道号:"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/xindaohao"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/f1_tv_freq_rate_title"
+        android:layout_below="@id/sound_switch"
+        android:layout_toRightOf="@id/f1_tv_freq_no_title"
+        android:gravity="center"
+        android:text="扫描中"
+        android:textSize="18sp"/>
+
+    <ImageView
+        android:id="@+id/f1_img_divider2"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/f1_tv_freq_rate_title"
+        android:layout_below="@id/sound_switch"
+        android:layout_toRightOf="@id/xindaohao"
+        android:background="#a7a4a4"/>
+
+    <TextView
+        android:id="@+id/f1_tv_bi_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/f1_tv_freq_rate_title"
+        android:layout_below="@id/sound_switch"
+        android:layout_toRightOf="@id/f1_img_divider2"
+        android:gravity="center"
+        android:text="信噪比:"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/xinzaobi"
+        android:layout_width="65dp"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/f1_tv_freq_rate_title"
+        android:layout_below="@id/sound_switch"
+        android:layout_toRightOf="@id/f1_tv_bi_title"
+        android:gravity="center"
+        android:textSize="18sp"/>
+
+
+    <com.fenghuo.seaweather.widget.MarqueenTextView
+        android:id="@+id/new_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/sound_switch"
+        android:layout_below="@id/f1_tv_freq_rate_title"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="欢迎使用气象接收软件--陕西烽火实业有限公司"
+        android:textSize="60sp"/>
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/lv_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@id/sound_switch"
+        android:layout_below="@id/new_msg"/>
+</RelativeLayout>
