@@ -9,6 +9,7 @@ import com.fenghuo.seaweather.R;
  */
 
 public class Params {
+    // TODO: 2017/5/2 0002 要定下来每个气象局有几个分区!!! 
     public static final int MAOMING_AREA_COUNT = 0;
     public static final int ZHOUSHAN_AREA_COUNT = 0;
     public static final int SHANDONG_AREA_COUNT = 0;
@@ -34,6 +35,13 @@ public class Params {
             "大雪-暴雪", "浮尘", "扬沙", "沙尘暴", "强沙尘暴", "台风"
     };
 
-    public static final String[] windDirection = {"","北风", "北东北风", "东北风", "东东北风", "东风", "东东南风", "东南风", "南东南风",
+    public static final String[] windDirection = {"", "北风", "北东北风", "东北风", "东东北风", "东风", "东东南风", "东南风", "南东南风",
             "南风", "南西南风", "西南风", "西西南风", "西风", "西西北风", "西北风", "北西北风"};
+
+    public static int my_area = 0;
+    public static int my_group = 0;
+    public static int my_id = 0;
+
+    public static final int type_weather = 1001;
+    public static final int type_typhooon = 1002;
 }

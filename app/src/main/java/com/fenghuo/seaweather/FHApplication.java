@@ -89,6 +89,9 @@ public class FHApplication extends Application {
         for (int i = 0; i < mChannelCount; i++) {
             mChannels.add(i, "10.0000");
         }
+
+        // TODO: 2017/5/2 0002  这里读取配置文件,自己的id和所在区域,如果没有的话设置为0,等待读取;
+
     }
 
     //crash回调

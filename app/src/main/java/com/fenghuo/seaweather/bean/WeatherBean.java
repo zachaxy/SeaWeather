@@ -1,5 +1,7 @@
 package com.fenghuo.seaweather.bean;
 
+import com.fenghuo.seaweather.utils.Params;
+
 import java.io.Serializable;
 
 /**
@@ -8,14 +10,24 @@ import java.io.Serializable;
  * Description :
  */
 
-public class WeatherBean implements Serializable {
+public class WeatherBean implements Serializable, IMsg {
     public int weatherType1;
     public int weatherType2;
     /*public String windDirct;
     public String windPower;
     public String gustWind;*/
 
-    public String desc;
+    public String desc;  //只包含 风向 风力 阵风 的转向;
     public String visibility;
     public String waveHeight;
+
+    @Override
+    public String getMsgContent() {
+        return desc + "，" + visibility + "，" + waveHeight;
+    }
+
+    @Override
+    public int getMsgType() {
+        return Params.type_weather;
+    }
 }
